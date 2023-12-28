@@ -1,1 +1,2 @@
-# OpenCV-Sticker-Detection
+# Toyota-Innovation-Challenge-Automated-Sticker-Detection
+Implemented an automated system in Python for assessing the coverage of circular stickers over holes within images. Utilized OpenCV for image processing tasks, such as thresholding, Canny edge detection, and contour-based shape identification. Implemented the Hough Circle Transform to identify circular shapes within the images. Employed matplotlib for visual representations, displaying detected circles and annotated shapes on the original images for detailed analysis.
