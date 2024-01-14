@@ -1,3 +1,39 @@
+import os
+import sys
+
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+import cv2
+
+import ipywidgets as widgets
+from ipywidgets import interact, interact_manual
+
+from IPython.display import display, Javascript, Image
+
+from google.colab.output import eval_js
+from base64 import b64decode, b64encode
+import PIL
+import io
+import html
+import time
+
+#Get Python and OpenCV Version
+
+print('OpenCV-Python Lib Version:', cv2.__version__)
+print('Python Version:',sys.version)
+
+from google.colab import drive
+drive.mount('/content/drive')
+
+Metal1 = cv2.imread('/content/drive/MyDrive/Colab Notebooks/Training Images/Metal/Metal_1.jpg', cv2.IMREAD_UNCHANGED)
+
+plt.figure(figsize=(20,10))
+#Note: matplotlib uses RGB format so had to convert BGR-to-RGB
+plt.imshow(cv2.cvtColor(Metal1,cv2.COLOR_BGR2RGB))
+plt.title('RGB Image',color='c')
+
 Metal1_Gray = cv2.cvtColor(Metal1, cv2.COLOR_BGR2RGB)
 #Metal1_Canny = cv2.Canny(Metal1_Gray, 50, 200)
 #ret, Metal1_Binary = cv2.threshold(Metal1_Gray, 25, 255, cv2.THRESH_BINARY)
